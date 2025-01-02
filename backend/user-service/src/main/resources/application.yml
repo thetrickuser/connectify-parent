@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mydb
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+app:
+  jwt:
+    secret: f234n34n2k34j23n43l2k423
+    expirationMs: 600000
+logging:
+  level:
+    root: "debug"

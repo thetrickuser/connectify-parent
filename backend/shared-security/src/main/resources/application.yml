@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: shared-security
+logging:
+  level:
+    root: "debug"
+    org.springframework.web: "debug"
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mydb
+app:
+  jwt:
+    secret: f234n34n2k34j23n43l2k423
+    expirationMs: 600000
