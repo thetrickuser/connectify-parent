@@ -10,9 +10,9 @@ spring:
             - Path=/api/users/**
           filters:
             - StripPrefix=2
-logging:
-  level:
-    root: "debug"
+#logging:
+#  level:
+#    root: "debug"
 server:
   port: 8090
 eureka:

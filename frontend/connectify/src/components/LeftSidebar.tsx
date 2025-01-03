@@ -1,6 +1,6 @@
-const Sidebar = () => {
+const LeftSidebar = () => {
     return (
-        <aside className="w-1/4 bg-gray-100 p-4"><h2 className="font-bold mb-4">Sidebar</h2>
+        <aside className="w-1/4 bg-gray-100 p-4">
             <ul>
                 <li className="mb-2">Home</li>
                 <li className="mb-2">Profile</li>
@@ -10,4 +10,4 @@ const Sidebar = () => {
     )
 }
 
-export default Sidebar;
+export default LeftSidebar;

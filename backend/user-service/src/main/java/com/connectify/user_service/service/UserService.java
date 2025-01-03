@@ -33,8 +33,8 @@ public class UserService {
 
     public void registerUser(RegisterRequest request) {
         UserAuth user = new UserAuth();
-        user.setEmail(request.getEmail());
-        user.setPasswordHash(passwordEncoder.encode(request.getPassword()));
+        user.setEmail(request.email());
+        user.setPasswordHash(passwordEncoder.encode(request.password()));
         user.setRoles(List.of("ROLE_USER"));
         user.setCreatedAt(LocalDateTime.now());
         authRepository.save(user);

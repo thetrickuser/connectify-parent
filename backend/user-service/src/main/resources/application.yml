@@ -18,6 +18,6 @@ app:
   jwt:
     secret: f234n34n2k34j23n43l2k423
     expirationMs: 600000
-logging:
-  level:
-    root: "debug"
+#logging:
+#  level:
+#    root: "debug"

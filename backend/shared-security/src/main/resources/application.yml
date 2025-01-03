@@ -1,10 +1,10 @@
 spring:
   application:
     name: shared-security
-logging:
-  level:
-    root: "debug"
-    org.springframework.web: "debug"
+#logging:
+#  level:
+#    root: "debug"
+#    org.springframework.web: "debug"
   data:
     mongodb:
       host: localhost

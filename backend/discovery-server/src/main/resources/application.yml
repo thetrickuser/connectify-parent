@@ -1,9 +1,9 @@
 spring:
     application:
         name: discovery-server
-logging:
-    level:
-        root: "debug"
+#logging:
+#    level:
+#        root: "debug"
 server:
     port: 8761
 eureka:
