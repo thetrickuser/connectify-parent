@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -45,6 +46,9 @@ public class UserService {
         if (authentication.isAuthenticated()) {
             List<String> roles = authentication.getAuthorities().stream().map(role -> role.getAuthority()).toList();
             String token = jwtTokenProvider.generateToken(request.email(), roles);
+            UserAuth user = authRepository.findByEmail(authentication.getPrincipal().toString()).get();
+            user.setLastLogin(LocalDateTime.now());
+            authRepository.save(user);
             return token;
         }
         return null;
